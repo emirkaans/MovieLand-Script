@@ -28,21 +28,19 @@ function renderMovies(movies) {
     movieCard.classList.add("movie-card");
 
     movieCard.innerHTML = `
-    
-    <div class="poster">
-    <img src="${IMG_PATH + poster_path}" alt="${title}" />
-  </div>
-  <div class="name-score">
-    <h3>${title}</h3>
-    <span class="${chooseClass(vote_average)}">${Number(
-      vote_average.toFixed(1)
-    )}</span>
-  </div>
-  <div class="description">
-    <p>${overview} </p>
-  </div>
+        <div class="poster">
+          <img src="${IMG_PATH + poster_path}" alt="${title}" />
+        </div>
+        <div class="name-score">
+          <h3>${title}</h3>
+          <span class="${chooseClass(vote_average)}">${Number(
+          vote_average.toFixed(1)
+        )}</span>
+        </div>
+        <div class="description">
+        <p>${overview} </p>
+        </div>
     `;
-
     containerEl.appendChild(movieCard);
   });
 }
