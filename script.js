@@ -47,8 +47,8 @@ function renderMovies(movies) {
   });
 }
 
-function chooseClass(vote) {
-  if (vote >= 8) {
+function chooseClass(rate) {
+  if (rate >= 8) {
     return "green";
   } else if (vote >= 5) {
     return "orange";
