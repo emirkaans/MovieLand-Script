@@ -50,7 +50,7 @@ function renderMovies(movies) {
 function chooseClass(rate) {
   if (rate >= 8) {
     return "green";
-  } else if (vote >= 5) {
+  } else if (rate >= 5) {
     return "orange";
   } else {
     return "red";
