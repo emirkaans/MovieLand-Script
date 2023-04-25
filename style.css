@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+:root {
+  --primary-color: #c4c4c4;
+  --secondary-color: #1f1057;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+/* Header Section */
+header {
+  padding: 0.1rem;
+  width: 100%;
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+  margin-bottom: 2rem;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+#logo--pic {
+  width: 4.5rem;
+  margin-left: 1.5rem;
+}
+
+#logo {
+  color: #fff;
+  margin-left: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 5rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.7rem;
+  color: var(--secondary-color);
+  width: 14rem;
+}
+
+.search::placeholder {
+  color: #7378c5;
+  font-size: 1.2rem;
+}
+
+.search:focus {
+  outline: none;
+  background-color: var(--primary-color);
+}
+
+#btn-search {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 5rem;
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.7rem;
+  color: #fff;
+  margin: 1.3rem;
+}
+
+#btn-search:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: var(--secondary-color);
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+h2 {
+  margin-top: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* Movie card styles */
+.movie-card {
+  width: 25rem;
+  max-width: 300px;
+  margin: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+.movie-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.movie-card:hover .description {
+  transform: translateY(0);
+  opacity: 1;
+}
+.movie-card:hover .poster {
+  filter: grayscale(100%);
+}
+.poster img {
+  width: 100%;
+  transition: all 0.5s ease;
+}
+.name-score {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+.name-score h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.name-score span {
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.name-score span.green {
+  color: lightgreen;
+}
+
+.name-score span.orange {
+  color: orange;
+}
+
+.name-score span.red {
+  color: red;
+}
+.description {
+  background-color: #000;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 2rem;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  max-height: 100%;
+  transform: translateY(-101%);
+  overflow-y: auto;
+  transition: transform 0.3s ease-in;
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 13px;
+  }
+
+  header {
+    height: 7rem;
+  }
+}
